@@ -1,7 +1,7 @@
 import mock
 import unittest
 
-from lambda_package.utility import Utility
+from exponential_backoff.utility import Utility
 
 
 class TestUtility(unittest.TestCase):

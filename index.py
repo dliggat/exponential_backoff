@@ -1,7 +1,8 @@
 import logging
 import os
 
-from lambda_package.utility import Utility
+from exponential_backoff.utility import Utility
+from exponential_backoff.retryer import Retryer
 
 
 logging.basicConfig()
@@ -11,10 +12,15 @@ logger.setLevel(logging.INFO)
 
 def handler(event, context):
     """Entry point for the Lambda function."""
-    logger.info('This is being invoked from AWS account: {0}'.format(
-        Utility.aws_account_id()))
+    a = Retryer('vol-09df3b7e27d642083')
+
+
+    for i in range(20):
+        logger.info('Attempt: {0}'.format(i))
+        snapshot_id = a.go()
+        logger.info('The snapshot id is: {0}'.format(snapshot_id))
 
 
 if __name__ == '__main__':
-    from lambda_package.localcontext import LocalContext
+    from exponential_backoff.localcontext import LocalContext
     handler(None, LocalContext())

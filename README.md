@@ -1,5 +1,4 @@
-# lambda-package-template
-[![Build Status](https://travis-ci.com/TriNimbus/lambda-package-template.svg?token=qUgWaG44GiU7kPHZFG3v&branch=master)](https://travis-ci.com/TriNimbus/lambda-package-template)
+# exponential_backoff
 
 A sample repository for structuring Lambda functions for build/deploy
 
@@ -33,8 +32,6 @@ A sample repository for structuring Lambda functions for build/deploy
 In a [new virtualenv](https://github.com/yyuu/pyenv-virtualenv):
 
 ```bash
-git clone https://github.com/TriNimbus/lambda-package-template
-cd lambda-package-template
 make init
 ```
 

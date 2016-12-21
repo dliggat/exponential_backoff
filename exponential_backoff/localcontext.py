@@ -1,4 +1,4 @@
-from lambda_package.utility import Utility
+from exponential_backoff.utility import Utility
 
 class LocalContext(object):
     """A class to simulate the Lambda context locally."""

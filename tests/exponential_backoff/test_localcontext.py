@@ -1,12 +1,12 @@
 import mock
 import unittest
 
-from lambda_package.localcontext import LocalContext
+from exponential_backoff.localcontext import LocalContext
 
 
 class TestLocalContext(unittest.TestCase):
 
-    @mock.patch('lambda_package.localcontext.Utility')
+    @mock.patch('exponential_backoff.localcontext.Utility')
     def testInvokedFunctionArn(self, mock_utility):
         """Tests the output of LocalContext.invoked_function_arn."""
         mock_utility.aws_account_id.return_value = 123456654321

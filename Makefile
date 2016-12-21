@@ -1,6 +1,6 @@
 STAGING_DIR := package
 BUILDS_DIR  := builds
-MODULE      := lambda_package
+MODULE      := exponential_backoff
 PIP         := pip install -r
 
 .PHONY: init invoke test clean build check_vars deploy
